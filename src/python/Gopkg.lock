@@ -24,7 +24,7 @@
     "packager",
     "snapshot"
   ]
-  revision = "52732f15fbe4f054b3686a4e9fdc527fd51c5cca"
+  revision = "e118861edfe5558db89cc012af26d315bc86279d"
 
 [[projects]]
   name = "github.com/elazarl/goproxy"
@@ -35,19 +35,19 @@
   branch = "master"
   name = "github.com/golang/mock"
   packages = ["gomock"]
-  revision = "8b2eeeb0ca5f56c78bec5efde9c4a21d9201126c"
+  revision = "22bbf0ddf08105dfa364d0a2fa619dfa71014af5"
 
 [[projects]]
   branch = "master"
   name = "github.com/google/subcommands"
   packages = ["."]
-  revision = "a3682377147edf596d303faabd89f81977b3f678"
+  revision = "5bae204cdfb2d92dcc333d56014bae6a2f6c58b1"
 
 [[projects]]
-  branch = "master"
   name = "github.com/kr/text"
   packages = ["."]
-  revision = "7cafcd837844e784b526369c9bce262804aebc60"
+  revision = "e2ffdb16a802fe2bb95e2e35ff34f0e53aeef34f"
+  version = "v0.1.0"
 
 [[projects]]
   branch = "master"
@@ -72,7 +72,7 @@
     "reporters/stenographer/support/go-isatty",
     "types"
   ]
-  revision = "6d8be987c536ebd84576a5a46208e7b7a3c796b0"
+  revision = "000d317071340972710dc1da9ae3c2c016a7a560"
 
 [[projects]]
   branch = "master"
@@ -91,13 +91,13 @@
     "matchers/support/goraph/util",
     "types"
   ]
-  revision = "b7d1a52235cc433a76c556aa3f4229e63b95e7da"
+  revision = "9be84105672ba4433a3b61f1b4d7f9ff8b022293"
 
 [[projects]]
   name = "github.com/tidwall/gjson"
   packages = ["."]
-  revision = "01f00f129617a6fe98941fb920d6c760241b54d2"
-  version = "v1.1.0"
+  revision = "f123b340873a0084cb27267eddd8ff615115fbff"
+  version = "v1.1.2"
 
 [[projects]]
   branch = "master"
@@ -112,7 +112,7 @@
     "bcrypt",
     "blowfish"
   ]
-  revision = "b0697eccbea9adec5b7ba8008f4c33d98d733388"
+  revision = "a49355c7e3f8fe157a85be2f77e6e269a0f89602"
 
 [[projects]]
   branch = "master"
@@ -123,13 +123,13 @@
     "html/atom",
     "html/charset"
   ]
-  revision = "5f9ae10d9af5b1c89ae6904293b14b064d4ada23"
+  revision = "afe8f62b1d6bbd81f31868121a50b06d8188e1f9"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
-  revision = "79b0c6888797020a994db17c8510466c72fe75d9"
+  revision = "63fc586f45fe72d95d5240a5d5eb95e6503907d3"
 
 [[projects]]
   name = "golang.org/x/text"

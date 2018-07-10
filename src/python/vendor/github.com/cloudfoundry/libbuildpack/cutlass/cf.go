@@ -1,7 +1,6 @@
 package cutlass
 
 import (
-	"bytes"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -46,7 +45,7 @@ type App struct {
 	Memory       string
 	Disk         string
 	StartCommand string
-	Stdout       *bytes.Buffer
+	Stdout       *Buffer
 	appGUID      string
 	env          map[string]string
 	logCmd       *exec.Cmd
@@ -141,6 +140,23 @@ func createBuildpack(language, file string) error {
 		return err
 	}
 	return nil
+}
+
+func CountBuildpack(language string) (int, error) {
+	command := exec.Command("cf", "buildpacks")
+	targetBpname := fmt.Sprintf("%s_buildpack", language)
+	matches := 0
+	lines, err := command.CombinedOutput()
+	if err != nil {
+		return -1, err
+	}
+	for _, line := range strings.Split(string(lines), "\n") {
+		bpname := strings.SplitN(line, " ", 2)[0]
+		if bpname == targetBpname {
+			matches++
+		}
+	}
+	return matches, nil
 }
 
 func CreateOrUpdateBuildpack(language, file string) error {
@@ -290,7 +306,7 @@ func (a *App) PushNoStart() error {
 	if a.logCmd == nil {
 		a.logCmd = exec.Command("cf", "logs", a.Name)
 		a.logCmd.Stderr = DefaultStdoutStderr
-		a.Stdout = bytes.NewBuffer(nil)
+		a.Stdout = &Buffer{}
 		a.logCmd.Stdout = a.Stdout
 		if err := a.logCmd.Start(); err != nil {
 			return err
